@@ -129,14 +129,24 @@ private:
 
 class SunsetPredictor{
 public:
-  typedef struct __attribute__((packed)) {
-    int year      = 2018;
-    int month     = 1;
-    int day       = 1;
-    int hour      = 0;
-    int minute    = 0;
-    int second    = 0;
-  } GPSTime;
+  // typedef struct __attribute__((packed)) {
+  //   int year      = 2018;
+  //   int month     = 1;
+  //   int day       = 1;
+  //   int hour      = 0;
+  //   int minute    = 0;
+  //   int second    = 0;
+  // } GPSTime;
+
+    struct __attribute__((packed)) GPSTime{
+      int year      = 2018;
+      int month     = 1;
+      int day       = 1;
+      int hour      = 0;
+      int minute    = 0;
+      int second    = 0;
+    };
+
 
   SunsetPredictor();
   void calcValues(float lon, float lat, GPSTime gpsTime, double extraSeconds);

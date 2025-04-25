@@ -12,7 +12,19 @@
 class PastaSim
 {
 public:
-	typedef struct {
+	// typedef struct {
+	// 	bool nightfall = 1;						// boolean to toggle nightfall on or off
+	// 	float k_drag = 0.006;                   // Linearized drag constant of the balloon, in m/s per g
+	// 	float val_dldt = 3;						// change in lift per unit time cuased by venting, in g/s 
+	// 	float bal_dldt = 0.8;					// change in lift per unit time cuased by ballast, in g/s 
+	// 	float freq = 20;                        // frequency of the simulation, or in other words, 1 over sim timestep
+	// 	unsigned int sun_calc_interval = 60000; // interval for how often sun posisition is calculated, in ms
+	// 	float lon = -122.1697;                  // longitude of balloon (used for nightfall)
+	// 	float lat = 37.4275;                    // latitude of balloon (used for nightfall)
+	// 	SunsetPredictor::GPSTime gtime;
+	// } Config;
+
+	struct Config{
 		bool nightfall = 1;						// boolean to toggle nightfall on or off
 		float k_drag = 0.006;                   // Linearized drag constant of the balloon, in m/s per g
 		float val_dldt = 3;						// change in lift per unit time cuased by venting, in g/s 
@@ -22,7 +34,8 @@ public:
 		float lon = -122.1697;                  // longitude of balloon (used for nightfall)
 		float lat = 37.4275;                    // latitude of balloon (used for nightfall)
 		SunsetPredictor::GPSTime gtime;
-	} Config;
+	};
+
 	Config conf;
 	PastaSim(int seed);
 	PastaSim();
