@@ -16,3 +16,5 @@ hootl/**/*.h5
 hootl/**/ut
 .idea
 serial_monitor/**/*.pyc
+# Compiled Object files
+*.o
